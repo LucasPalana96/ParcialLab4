@@ -1,0 +1,21 @@
+meta {
+  name: UPDATE Author
+  type: http
+  seq: 4
+}
+
+put {
+  url: 127.0.0.1:3000/authors/{{authorId}}
+  body: json
+  auth: none
+}
+
+headers {
+  Content-Type: application/json
+}
+
+body:json {
+  {
+      "bio": "Premio Nobel de Literatura 1982"
+  }
+}

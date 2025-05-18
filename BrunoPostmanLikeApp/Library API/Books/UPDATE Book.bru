@@ -1,0 +1,21 @@
+meta {
+  name: UPDATE Book
+  type: http
+  seq: 4
+}
+
+put {
+  url: 127.0.0.1:3000/books/{{bookId}}
+  body: json
+  auth: none
+}
+
+headers {
+  Content-Type: application/json
+}
+
+body:json {
+  {
+      "disponible": false
+  }
+}

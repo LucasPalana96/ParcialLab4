@@ -1,0 +1,24 @@
+meta {
+  name: CREATE Book
+  type: http
+  seq: 2
+}
+
+post {
+  url: 127.0.0.1:3000/books
+  body: json
+  auth: none
+}
+
+headers {
+  Content-Type: application/json
+}
+
+body:json {
+  {
+      "titulo": "Como vivir solo, manual para enfrentar la postmodernidad",
+      "genero": "novela",
+      "publicacion": "2025-11-27",
+      "disponible": true
+  }
+}
